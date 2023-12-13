@@ -1,0 +1,22 @@
+name = "fbt-vacationtracker-float"
+main = "./build/worker.mjs"
+compatibility_date = "2023-02-24"
+compatibility_flags = []
+workers_dev = false
+
+[build]
+command = "make build"
+
+
+[[d1_databases]]
+binding = "VTFLOAT"
+database_name = "db_name" # change to your database name
+database_id = "" # change to your database id
+
+[vars]
+TIMEZONE = "Europe/Warsaw" # change to your timezone
+FLOAT_API_KEY = "" # change to your float api key
+VACATION_TRACKER_API_KEY = "" # change to your vacation tracker api key
+
+[triggers]
+crons = ["*/5 * * * *"] # you can tweak this to your liking
